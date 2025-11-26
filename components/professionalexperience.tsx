@@ -123,14 +123,14 @@ const ExperienceTimeline = () => {
   const currentExperience = experiences[currentIndex];
 
   return (
-    <div className={`h-screen bg-[#FAF9F6] p-4 overflow-hidden ${berkshireSwash.variable} ${playfairDisplay.variable}`}>
-      <div className="max-w-7xl mx-auto h-full flex flex-col">
+    <div className={`min-h-screen bg-[#FAF9F6] p-4 overflow-auto ${berkshireSwash.variable} ${playfairDisplay.variable}`}>
+      <div className="max-w-7xl mx-auto flex flex-col pb-8">
         {/* Header */}
-        <div className="mb-6 text-center">
-          <span className="text-amber-700 text-xl tracking-[0.3em] uppercase font-semibold">
+        <div className="mb-6 text-center pt-4">
+          <span className="text-amber-700 text-base sm:text-xl tracking-[0.3em] uppercase font-semibold">
             JOURNEY
           </span>
-          <div className="w-48 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent mx-auto mt-4" />
+          <div className="w-32 sm:w-48 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent mx-auto mt-4" />
         </div>
 
         {/* Navigation Arrows */}
@@ -229,22 +229,22 @@ const ExperienceTimeline = () => {
         </div>
 
         {/* Content Card */}
-        <div className="grid md:grid-cols-2 gap-6 items-center flex-1 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start mt-4">
           {/* Image placeholder */}
-          <div className="bg-linear-to-br from-amber-400/20 via-amber-300/10 to-amber-500/20 rounded-lg h-64 flex items-center justify-center border-2 border-amber-300">
+          <div className="bg-linear-to-br from-amber-400/20 via-amber-300/10 to-amber-500/20 rounded-lg h-48 sm:h-64 flex items-center justify-center border-2 border-amber-300">
             <div className="text-amber-700 text-center p-8">
-              <div className="text-6xl mb-4">📸</div>
-              <p className="text-sm opacity-75" style={{ fontFamily: 'var(--font-playfair)' }}>Professional photo placeholder</p>
+              <div className="text-4xl sm:text-6xl mb-4">📸</div>
+              <p className="text-xs sm:text-sm opacity-75" style={{ fontFamily: 'var(--font-playfair)' }}>Professional photo placeholder</p>
             </div>
           </div>
 
           {/* Content */}
-          <div className="p-4 overflow-y-auto max-h-full">
-            <div className="inline-block text-white px-6 py-2 rounded text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-berkshire)', backgroundColor: '#A68229' }}>
+          <div className="p-4 space-y-4">
+            <div className="inline-block text-white px-4 sm:px-6 py-2 rounded text-xl sm:text-2xl font-bold" style={{ fontFamily: 'var(--font-berkshire)', backgroundColor: '#A68229' }}>
               {currentExperience.year}
             </div>
             
-            <h2 className="text-2xl font-bold mb-4" style={{
+            <h2 className="text-xl sm:text-2xl font-bold" style={{
               color: '#A68229',
               fontFamily: 'var(--font-playfair)'
             }}>
@@ -252,20 +252,20 @@ const ExperienceTimeline = () => {
             </h2>
             
             {currentExperience.company && (
-              <h3 className="text-xl font-semibold text-gray-700 mb-2" style={{ fontFamily: 'var(--font-playfair)' }}>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-700" style={{ fontFamily: 'var(--font-playfair)' }}>
                 {currentExperience.company}
               </h3>
             )}
             
             {currentExperience.period && (
-              <p className="text-gray-600 font-medium mb-4">
+              <p className="text-sm sm:text-base text-gray-600 font-medium">
                 {currentExperience.period}
               </p>
             )}
             
-            <div className="w-20 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent mb-4" />
+            <div className="w-20 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent" />
             
-            <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'system-ui, sans-serif' }}>
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed" style={{ fontFamily: 'system-ui, sans-serif' }}>
               {currentExperience.description}
             </p>
           </div>
