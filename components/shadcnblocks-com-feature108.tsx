@@ -160,8 +160,8 @@ const Feature108 = ({
           </button> */}
 
           {/* Content */}
-          <div className="grid place-items-center gap-6 lg:grid-cols-2 lg:gap-8">
-            <div className="flex flex-col gap-3 sm:gap-4 order-2 lg:order-1">
+          <div className="grid place-items-center gap-6 grid-cols-1 lg:grid-cols-2 lg:gap-8">
+            <div className="flex flex-col gap-3 sm:gap-4 order-2 lg:order-1 w-full">
               <div className="inline-block w-fit mb-1 sm:mb-2">
                 <span className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-amber-100 text-amber-800 rounded-full text-xs sm:text-sm font-semibold border border-amber-300" style={{
                   fontFamily: 'var(--font-playfair)'
@@ -173,7 +173,7 @@ const Feature108 = ({
                 <div style={{ color: '#A68229' }} className="shrink-0">
                   {currentTab?.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight" style={{
+                <h3 className="text-lg sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight" style={{
                   color: '#A68229',
                   fontFamily: 'var(--font-playfair)'
                 }}>
@@ -192,8 +192,8 @@ const Feature108 = ({
                 {currentTab?.content.buttonText}
               </button>
             </div>
-            <div className="flex items-center justify-center order-1 lg:order-2 mb-4 lg:mb-0">
-              <div className="relative w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-linear-to-br from-amber-400/20 via-amber-300/10 to-amber-500/20 p-[3px] shadow-2xl">
+            <div className="flex items-center justify-center order-1 lg:order-2 mb-4 lg:mb-0 w-full">
+              <div className="relative w-60 h-60 sm:w-[340px] sm:h-[340px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-linear-to-br from-amber-400/20 via-amber-300/10 to-amber-500/20 p-[3px] shadow-2xl">
                 <div className="w-full h-full rounded-full bg-[#FAF9F6] flex flex-col items-center justify-center text-center gap-2 sm:gap-3 px-6 sm:px-8">
                   <div>
                     <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-none" style={{

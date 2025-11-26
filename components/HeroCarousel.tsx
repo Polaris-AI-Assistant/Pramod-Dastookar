@@ -22,7 +22,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[85vh] xl:h-screen overflow-hidden -mt-3.5 sm:-mt-4 lg:-mt-5">
+    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[85vh] xl:h-screen overflow-hidden -mt-2 sm:-mt-3.5 md:-mt-4 lg:-mt-5">
       {images.map((image, index) => (
         <div
           key={index}

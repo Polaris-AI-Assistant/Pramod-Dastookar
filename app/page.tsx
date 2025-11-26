@@ -19,16 +19,17 @@ export default function Home() {
   };
 
   return (
-    <div className="relative">
+    <>
       <Navbar/>
-      <HeroCarousel />
-      <Feature108Demo />
-      {/* <Impact/> */}
-      <Logos3 />
-      
-      <ExperienceTimeline />
-      <Contact2/>
-
-    </div>
+      <div className="w-full">
+        <HeroCarousel />
+        <Feature108Demo />
+        {/* <Impact/> */}
+        <Logos3 />
+        
+        <ExperienceTimeline />
+        <Contact2/>
+      </div>
+    </>
   );
 }
