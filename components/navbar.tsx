@@ -13,14 +13,14 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className={`px-4 sm:px-6 py-3 sm:py-4 shadow-lg fixed top-0 left-0 right-0 z-50 transition-colors duration-500 backdrop-blur-sm ${
+      <nav className={`px-3 sm:px-6 py-2 sm:py-3 md:py-4 shadow-lg fixed top-0 left-0 right-0 z-50 transition-colors duration-500 backdrop-blur-sm ${
         isMenuOpen ? 'bg-white text-gray-800' : 'text-white border-b border-amber-300/30'
       }`}
       style={!isMenuOpen ? { backgroundColor: '#A68229' } : undefined}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo and Name */}
-          <Link href="/" className="flex items-center space-x-3">
-            <h1 className={`text-sm sm:text-base md:text-lg lg:text-xl font-bold tracking-wide transition-opacity ${isMenuOpen ? 'text-gray-800 hover:text-amber-600' : 'text-white hover:opacity-90'}`}>
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 shrink min-w-0">
+            <h1 className={`text-xs sm:text-base md:text-lg lg:text-xl font-bold tracking-wide transition-opacity truncate ${isMenuOpen ? 'text-gray-800 hover:text-amber-600' : 'text-white hover:opacity-90'}`}>
               <span className="hidden sm:inline">PROF. PRAMOD DASTOORKAR</span>
               <span className="sm:hidden">P. DASTOORKAR</span>
             </h1>
@@ -43,15 +43,15 @@ const Navbar = () => {
           </div>
 
           {/* Icons */}
-          <div className="flex items-center space-x-2 sm:space-x-4">
+          <div className="flex items-center space-x-1 sm:space-x-4 shrink-0">
             <button className={`transition-colors hidden sm:block ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>
               <Search size={20} />
             </button>
             <button 
               onClick={toggleMenu}
-              className={`transition-colors ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}
+              className={`transition-colors p-1 ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
 
       {/* Dropdown Menu */}
       <div 
-        className={`fixed top-14 sm:top-16 left-0 right-0 bg-white shadow-2xl z-40 overflow-y-auto transition-all duration-500 ease-in-out ${
+        className={`fixed top-12 sm:top-14 md:top-16 left-0 right-0 bg-white shadow-2xl z-40 overflow-y-auto transition-all duration-500 ease-in-out ${
           isMenuOpen ? 'max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-4rem)] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -173,7 +173,7 @@ const Navbar = () => {
       </div>
 
       {/* Spacer to prevent content from hiding under fixed navbar */}
-      <div className="h-14 sm:h-16 lg:h-20"></div>
+      <div className="h-12 sm:h-14 md:h-16 lg:h-20"></div>
     </>
   );
 };
