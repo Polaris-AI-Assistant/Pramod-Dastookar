@@ -391,14 +391,6 @@ export default function YouTubePage() {
           }}>
             Explore insights on placements, career development, and industry trends
           </h2>
-          
-          {!isLoading && allVideos.length > 0 && (
-            <div className="mt-6">
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold text-amber-700">{allVideos.length} videos</span> loaded • Sorted by most recent first
-              </p>
-            </div>
-          )}
         </div>
 
         {/* Loading State */}
@@ -538,15 +530,6 @@ export default function YouTubePage() {
                     <span className="font-medium">Loading more videos...</span>
                   </div>
                 )}
-              </div>
-            )}
-
-            {/* End of Results Message */}
-            {isReachingEnd && allVideos.length > 0 && (
-              <div className="text-center mt-8 py-6">
-                <p className="text-gray-600 font-medium">
-                  🎉 You've reached the end! All videos loaded.
-                </p>
               </div>
             )}
 

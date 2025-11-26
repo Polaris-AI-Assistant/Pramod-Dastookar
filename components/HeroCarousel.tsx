@@ -22,7 +22,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden -mt-[24px]">
+    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[85vh] xl:h-screen overflow-hidden -mt-3.5 sm:-mt-4 lg:-mt-5">
       {images.map((image, index) => (
         <div
           key={index}
@@ -35,7 +35,7 @@ export default function HeroCarousel() {
             alt={image.alt}
             fill
             priority={index === 0}
-            className="object-cover object-center"
+            className="object-cover object-center sm:object-cover"
             quality={100}
             sizes="100vw"
           />
@@ -46,15 +46,15 @@ export default function HeroCarousel() {
       <div className="absolute inset-0 bg-black/20 z-20"></div>
       
       {/* Indicator dots */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex gap-2">
+      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex gap-2">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? "bg-white w-8"
-                : "bg-white/50 hover:bg-white/75"
+                ? "bg-white w-6 sm:w-8"
+                : "bg-white/50 hover:bg-white/75 w-2"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

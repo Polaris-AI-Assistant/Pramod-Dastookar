@@ -112,37 +112,37 @@ const Logos3 = ({
   ],
 }: Logos3Props) => {
   return (
-    <section className={`py-16 bg-[#FAF9F6] ${playfairDisplay.variable}`}>
-      <div className="container flex flex-col items-center text-center">
-        <div className="mb-8">
-          <div className="w-48 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent mx-auto mb-6" />
-          <h1 className="text-2xl font-bold lg:text-3xl leading-tight" style={{
+    <section className={`py-12 sm:py-14 md:py-16 bg-[#FAF9F6] ${playfairDisplay.variable}`}>
+      <div className="container mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
+        <div className="mb-6 sm:mb-8 w-full max-w-4xl mx-auto">
+          <div className="w-32 sm:w-40 md:w-48 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent mx-auto mb-4 sm:mb-5 md:mb-6" />
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight px-4" style={{
             color: '#A68229',
             fontFamily: 'var(--font-playfair)'
           }}>
             {heading}
           </h1>
-          <div className="w-48 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent mx-auto mt-6" />
+          <div className="w-32 sm:w-40 md:w-48 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent mx-auto mt-4 sm:mt-5 md:mt-6" />
         </div>
       </div>
-      <div className="pt-8 md:pt-10 lg:pt-12 pb-4">
+      <div className="pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-4">
         <div className="relative mx-auto flex items-center justify-center lg:max-w-6xl">
           <Carousel
             opts={{ loop: true }}
             plugins={[AutoScroll({ playOnInit: true })]}
           >
-            <CarouselContent className="ml-0 gap-1">
+            <CarouselContent className="ml-0 gap-0">
               {logos.map((logo) => (
                 <CarouselItem
                   key={logo.id}
                   className="flex basis-1/2 justify-center pl-0 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
                 >
-                  <div className="px-8 flex shrink-0 items-center justify-center py-4 min-w-[120px]">
+                  <div className="px-1 sm:px-4 md:px-6 lg:px-8 flex shrink-0 items-center justify-center py-1 sm:py-3 md:py-4 min-w-16 sm:min-w-[120px]">
                     <div className="w-full flex items-center justify-center">
                       <img
                         src={logo.image}
                         alt={logo.description}
-                        className={logo.className}
+                        className="h-8 sm:h-10 md:h-11 lg:h-12 w-auto"
                       />
                     </div>
                   </div>

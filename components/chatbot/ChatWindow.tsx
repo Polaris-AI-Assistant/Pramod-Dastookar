@@ -88,9 +88,9 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
   };
 
   return (
-    <Card className="fixed bottom-6 right-6 w-[420px] h-[650px] flex flex-col shadow-2xl border-2 z-50 animate-in slide-in-from-right duration-300 bg-linear-to-b from-background to-muted/20">
+    <Card className="fixed bottom-6 right-6 w-full sm:w-[420px] h-[500px] sm:h-[650px] max-w-[calc(100vw-3rem)] flex flex-col shadow-2xl border-2 z-50 animate-in slide-in-from-right duration-300 bg-linear-to-b from-background to-muted/20">
       {/* Header */}
-      <div className="flex items-center justify-between p-5 border-b bg-linear-to-r from-primary via-primary/90 to-primary text-primary-foreground rounded-t-lg">
+      <div className="flex items-center justify-between p-4 sm:p-5 border-b bg-linear-to-r from-primary via-primary/90 to-primary text-primary-foreground rounded-t-lg">
         <div className="flex items-center gap-3">
           <div className="relative">
             <div className="h-10 w-10 bg-primary-foreground/20 rounded-full flex items-center justify-center backdrop-blur-sm">

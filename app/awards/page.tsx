@@ -99,30 +99,30 @@ export default function AwardsPage() {
   return (
     <>
       <Navbar />
-      <div className={`min-h-screen bg-[#FAF9F6] py-20 px-8 ${berkshireSwash.variable} ${theSeasons.variable} ${calistoga.variable} ${playfairDisplay.variable}`}>
+      <div className={`min-h-screen bg-[#FAF9F6] py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 ${berkshireSwash.variable} ${theSeasons.variable} ${calistoga.variable} ${playfairDisplay.variable}`}>
       <div className="max-w-7xl mx-auto">
         {/* Header section */}
-        <div className="text-center mb-8">
-          <div className="inline-block mb-4">
-            <span className="text-amber-700 text-2xl tracking-[0.3em] uppercase font-semibold">
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="inline-block mb-3 sm:mb-4">
+            <span className="text-amber-700 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">
               Recognition & Excellence
             </span>
           </div>
-          <div className="w-54 h-px bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mb-8" />
+          <div className="w-32 sm:w-40 md:w-48 lg:w-54 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent mx-auto mb-4 sm:mb-6 md:mb-8" />
           
        
-          <h2 className="text-lg lg:text-xl text-gray-700 font-normal leading-relaxed max-w-3xl mx-auto" style={{
+          <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 font-normal leading-relaxed max-w-3xl mx-auto px-4" style={{
             fontFamily: 'system-ui, sans-serif'
           }}>
             Celebrating 25 years of excellence, innovation, and distinguished contributions to education and industry
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center">
           {/* Left Section - Text and Main Award */}
-          <div className="relative h-[600px] ml-20 mt-20">
+          <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] ml-4 sm:ml-8 md:ml-12 lg:ml-20 mt-8 sm:mt-12 md:mt-16 lg:mt-20 scale-75 sm:scale-85 md:scale-90 lg:scale-100 origin-top-left">
             {/* Golden Rectangle Border - Background */}
-            <div className="absolute top-12 left-12 w-[340px] h-[520px] border-4 z-0 flex  justify-center p-8"
+            <div className="absolute top-12 left-12 w-[340px] h-[520px] border-4 z-0 flex justify-center p-8"
                  style={{
                    borderColor: '#D4AF37',
                  }}>
@@ -141,7 +141,7 @@ export default function AwardsPage() {
             {/* Content - Positioned on the border */}
             <div className="relative h-full z-10">
               {/* Text at Top Left Corner of Rectangle */}
-              <div className="absolute -top-14 -left-14">
+              <div className="absolute -top-14 -left-10 sm:-left-14">
                 {/* 25 in Berkshire Swash */}
                 <h1 
                   className="text-[140px] leading-none mb-0"
@@ -178,7 +178,7 @@ export default function AwardsPage() {
               </div>
 
               {/* Main Trophy Image at Bottom Left */}
-              <div className="absolute -bottom-10 -left-45">
+              <div className="absolute -bottom-90 sm:-bottom-10 -left-45">
                 <Image
                   src="/mainaward.png"
                   alt="Main Award Trophy"
@@ -191,28 +191,28 @@ export default function AwardsPage() {
           </div>
 
           {/* Right Section - Award Badges Grid */}
-          <div className="flex flex-col gap-15 pt-12">
-            {/* Top Row - 3 Awards */}
-            <div className="grid grid-cols-3 gap-32">
+          <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-15 pt-32 sm:pt-8 md:pt-10 lg:pt-12">
+            {/* Awards - Stacked on Mobile, Grid on Desktop */}
+            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 lg:gap-20 xl:gap-32">
               {awards.slice(0, 3).map((award, index) => (
                 <div 
                   key={index} 
                   className="flex flex-col items-center"
                 >
                   {/* Award Badge */}
-                  <div className="relative mb-4">
+                  <div className="relative mb-2 sm:mb-3 md:mb-4">
                     <Image
                       src="/awardbadge.png"
                       alt={award.awardName}
                       width={130}
                       height={130}
-                      className="object-contain"
+                      className="object-contain w-20 sm:w-[100px] md:w-[120px] lg:w-[130px]"
                     />
                   </div>
 
                   {/* Award Name */}
                   <h3 
-                    className="text-[20px] font-bold text-center leading-tight mb-1 whitespace-pre-line"
+                    className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-bold text-center leading-tight mb-1 whitespace-pre-line"
                     style={{ 
                       color: '#A68229',
                       fontFamily: 'var(--font-playfair)'
@@ -223,7 +223,7 @@ export default function AwardsPage() {
 
                   {/* Company Name */}
                   <p 
-                    className="text-[16px] font-semibold text-center whitespace-nowrap mt-1 mb-3"
+                    className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[16px] font-semibold text-center whitespace-nowrap mt-1 mb-2 sm:mb-3"
                     style={{ 
                       color: '#000',
                       fontFamily: 'var(--font-playfair)'
@@ -247,26 +247,26 @@ export default function AwardsPage() {
             </div>
 
             {/* Bottom Row - 2 Awards (Centered) */}
-            <div className="flex justify-center gap-16">
+            <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-10 md:gap-12 lg:gap-16">
               {awards.slice(3, 5).map((award, index) => (
                 <div 
                   key={index + 3} 
                   className="flex flex-col items-center"
                 >
                   {/* Award Badge */}
-                  <div className="relative mb-4">
+                  <div className="relative mb-2 sm:mb-3 md:mb-4">
                     <Image
                       src="/awardbadge.png"
                       alt={award.awardName}
                       width={130}
                       height={130}
-                      className="object-contain"
+                      className="object-contain w-[80px] sm:w-[100px] md:w-[120px] lg:w-[130px]"
                     />
                   </div>
 
                   {/* Award Name */}
                   <h3 
-                    className="text-[20px] font-bold text-center leading-tight mb-1 whitespace-nowrap"
+                    className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-bold text-center leading-tight mb-1 whitespace-nowrap"
                     style={{ 
                       color: '#A68229',
                       fontFamily: 'var(--font-playfair)'
@@ -277,7 +277,7 @@ export default function AwardsPage() {
 
                   {/* Company Name */}
                   <p 
-                    className="text-[16px] font-semibold text-center whitespace-nowrap mt-1 mb-3"
+                    className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[16px] font-semibold text-center whitespace-nowrap mt-1 mb-2 sm:mb-3"
                     style={{ 
                       color: '#000',
                       fontFamily: 'var(--font-playfair)'
