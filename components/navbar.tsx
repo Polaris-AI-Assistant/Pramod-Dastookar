@@ -10,43 +10,58 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/awards', label: 'Awards' },
+    { href: '/experience', label: 'Experience' },
+    { href: '/youtube', label: 'YouTube' },
+    { href: '/pg-dastoorkar', label: 'P.G. Dastoorkar' },
+    { href: '/gallery', label: 'Gallery' },
+  ];
+
   return (
     <>
       {/* Main Navbar */}
-      <nav className={`px-6 py-4 shadow-lg fixed top-0 left-0 right-0 z-50 transition-colors duration-500 backdrop-blur-sm ${
+      <nav className={`px-4 sm:px-6 py-3 sm:py-4 shadow-lg fixed top-0 left-0 right-0 z-50 transition-colors duration-500 backdrop-blur-sm ${
         isMenuOpen ? 'bg-white text-gray-800' : 'text-white border-b border-amber-300/30'
       }`}
       style={!isMenuOpen ? { background: 'linear-gradient(165deg, #3D3426 0%, #2F2920 50%, #252017 100%)' } : undefined}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo and Name */}
-          <Link href="/" className="flex items-center space-x-3">
-            <h1 className={`text-xl font-bold tracking-wide transition-opacity ${isMenuOpen ? 'text-gray-800 hover:text-amber-600' : 'text-white hover:opacity-90'}`}>PROF. PRAMOD DASTOORKAR</h1>
+          <Link href="/" className="flex items-center space-x-3" onClick={closeMenu}>
+            <h1 className={`text-sm sm:text-lg lg:text-xl font-bold tracking-wide transition-opacity ${isMenuOpen ? 'text-gray-800 hover:text-amber-600' : 'text-white hover:opacity-90'}`}>
+              <span className="hidden sm:inline">PROF. PRAMOD DASTOORKAR</span>
+              <span className="sm:hidden">PROF. P. DASTOORKAR</span>
+            </h1>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className={`transition-colors font-medium ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>Home</Link>
-            <Link href="/about" className={`transition-colors font-medium ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>About</Link>
-            <Link href="/awards" className={`transition-colors font-medium ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>Awards</Link>
-            <Link href="/experience" className={`transition-colors font-medium ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>Experience</Link>
-            <Link href="/youtube" className={`transition-colors font-medium ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>YouTube</Link>
-            <Link href="/pg-dastoorkar" className={`transition-colors font-medium ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>P.G. Dastoorkar</Link>
-           
-            <Link href="/gallery" className={`transition-colors font-medium ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>Gallery</Link>
-            <div className={`flex items-center space-x-2 ${isMenuOpen ? 'text-gray-700' : 'text-white'}`}>
-            
-             
-            </div>
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href}
+                href={link.href} 
+                className={`transition-colors font-medium text-sm xl:text-base ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Icons */}
-          <div className="flex items-center space-x-4">
-            <button className={`transition-colors ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            <button className={`hidden sm:block transition-colors ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}>
               <Search size={20} />
             </button>
             <button 
               onClick={toggleMenu}
-              className={`transition-colors ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}
+              className={`transition-colors p-1 ${isMenuOpen ? 'text-gray-700 hover:text-amber-600' : 'text-white hover:text-amber-100'}`}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -56,29 +71,46 @@ const Navbar = () => {
 
       {/* Dropdown Menu */}
       <div 
-        className={`fixed top-16 left-0 right-0 bg-white shadow-2xl z-40 overflow-hidden transition-all duration-500 ease-in-out ${
-          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        className={`fixed top-14 sm:top-16 left-0 right-0 bg-white shadow-2xl z-40 overflow-y-auto transition-all duration-500 ease-in-out ${
+          isMenuOpen ? 'max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-4rem)] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+          {/* Mobile Navigation Links */}
+          <div className="lg:hidden mb-6 pb-6 border-b border-amber-200">
+            <h3 className="font-bold text-gray-800 mb-4 text-lg">MENU</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.href}
+                  href={link.href} 
+                  onClick={closeMenu}
+                  className="text-gray-700 hover:text-amber-600 hover:bg-amber-50 transition-colors text-sm font-medium py-2 px-3 rounded-lg border border-gray-100"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Column 1 - Main Menu */}
             <div>
-              <h3 className="font-bold text-gray-800 mb-4 text-lg">QUICK LINKS</h3>
-              <ul className="space-y-3">
-                <li><Link href="/" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Home</Link></li>
-                <li><Link href="/about" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">About</Link></li>
-                <li><Link href="/awards" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Awards & Recognition</Link></li>
-                <li><Link href="/experience" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Professional Experience</Link></li>
-                <li><Link href="/youtube" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">YouTube Channel</Link></li>
-                <li><Link href="/pg-dastoorkar" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">P.G. Dastoorkar (Father)</Link></li>
+              <h3 className="font-bold text-gray-800 mb-3 sm:mb-4 text-base sm:text-lg">QUICK LINKS</h3>
+              <ul className="space-y-2 sm:space-y-3">
+                <li><Link href="/" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Home</Link></li>
+                <li><Link href="/about" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">About</Link></li>
+                <li><Link href="/awards" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Awards & Recognition</Link></li>
+                <li><Link href="/experience" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Professional Experience</Link></li>
+                <li><Link href="/youtube" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">YouTube Channel</Link></li>
+                <li><Link href="/pg-dastoorkar" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">P.G. Dastoorkar (Father)</Link></li>
               </ul>
             </div>
 
             {/* Column 2 */}
             <div>
-              <h3 className="font-bold text-gray-800 mb-4 text-lg">EXPERTISE</h3>
-              <ul className="space-y-3">
+              <h3 className="font-bold text-gray-800 mb-3 sm:mb-4 text-base sm:text-lg">EXPERTISE</h3>
+              <ul className="space-y-2 sm:space-y-3">
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Career Guidance</a></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Placement Training</a></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Corporate Relations</a></li>
@@ -88,10 +120,10 @@ const Navbar = () => {
 
             {/* Column 3 - Content */}
             <div>
-              <h3 className="font-bold text-gray-800 mb-4 text-lg">CONTENT</h3>
-              <ul className="space-y-3">
-                <li><Link href="/youtube" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Video Lectures</Link></li>
-                <li><Link href="/titles" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Published Titles</Link></li>
+              <h3 className="font-bold text-gray-800 mb-3 sm:mb-4 text-base sm:text-lg">CONTENT</h3>
+              <ul className="space-y-2 sm:space-y-3">
+                <li><Link href="/youtube" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Video Lectures</Link></li>
+                <li><Link href="/titles" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Published Titles</Link></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Research Papers</a></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Patents</a></li>
               </ul>
@@ -99,8 +131,8 @@ const Navbar = () => {
 
             {/* Column 4 - Contact */}
             <div>
-              <h3 className="font-bold text-gray-800 mb-4 text-lg">CONNECT</h3>
-              <ul className="space-y-3">
+              <h3 className="font-bold text-gray-800 mb-3 sm:mb-4 text-base sm:text-lg">CONNECT</h3>
+              <ul className="space-y-2 sm:space-y-3">
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors font-semibold text-sm">Contact Information</a></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors font-semibold text-sm">Speaking Engagements</a></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors font-semibold text-sm">Consultation</a></li>
@@ -110,12 +142,12 @@ const Navbar = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 pt-8 border-t border-amber-200">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-amber-200">
             {/* Achievements */}
             <div>
-              <h3 className="font-bold text-gray-800 mb-4">ACHIEVEMENTS</h3>
-              <ul className="space-y-3">
-                <li><Link href="/awards" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Awards & Recognition</Link></li>
+              <h3 className="font-bold text-gray-800 mb-3 sm:mb-4 text-base sm:text-lg">ACHIEVEMENTS</h3>
+              <ul className="space-y-2 sm:space-y-3">
+                <li><Link href="/awards" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Awards & Recognition</Link></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Success Stories</a></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Student Testimonials</a></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Industry Impact</a></li>
@@ -124,9 +156,9 @@ const Navbar = () => {
 
             {/* Resources */}
             <div>
-              <h3 className="font-bold text-gray-800 mb-4">RESOURCES</h3>
-              <ul className="space-y-3">
-                <li><Link href="/youtube" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Career Videos</Link></li>
+              <h3 className="font-bold text-gray-800 mb-3 sm:mb-4 text-base sm:text-lg">RESOURCES</h3>
+              <ul className="space-y-2 sm:space-y-3">
+                <li><Link href="/youtube" onClick={closeMenu} className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Career Videos</Link></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Interview Tips</a></li>
                 <li><a href="#" className="text-gray-700 hover:text-amber-600 transition-colors text-sm">Resume Building</a></li>
               </ul>
@@ -134,8 +166,8 @@ const Navbar = () => {
 
             {/* Follow */}
             <div>
-              <h3 className="font-bold text-gray-800 mb-4">FOLLOW</h3>
-              <div className="flex space-x-3">
+              <h3 className="font-bold text-gray-800 mb-3 sm:mb-4 text-base sm:text-lg">FOLLOW</h3>
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 <a href="#" className="w-10 h-10 bg-linear-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center text-white hover:from-amber-600 hover:to-amber-700 transition-all shadow-md">
                   <Facebook size={18} />
                 </a>
@@ -158,7 +190,7 @@ const Navbar = () => {
       </div>
 
       {/* Spacer to prevent content from hiding under fixed navbar */}
-      <div className="h-20"></div>
+      <div className="h-16 sm:h-20"></div>
     </>
   );
 };
