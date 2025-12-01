@@ -142,47 +142,43 @@ const AboutSection = () => {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
                 style={{
-                  background: `linear-gradient(135deg, 
-                    rgba(255,255,255,0.9) 0%, 
-                    rgba(254,243,199,0.6) 50%,
-                    rgba(253,230,138,0.4) 100%)`,
+                  background: 'linear-gradient(165deg, #3D3426 0%, #2F2920 50%, #252017 100%)',
                   backdropFilter: 'blur(20px) saturate(180%)',
-                  border: '1.5px solid rgba(217,119,6,0.2)',
-                  boxShadow: `0 10px 40px -8px rgba(217,119,6,0.15), 
-                              inset 0 1px 0 rgba(255,255,255,0.95),
-                              inset 0 -1px 20px rgba(252,211,77,0.1)`
+                  border: '1.5px solid rgba(166,130,41,0.3)',
+                  boxShadow: `0 10px 40px -8px rgba(0,0,0,0.3), 
+                              inset 0 1px 0 rgba(255,255,255,0.1),
+                              inset 0 -1px 20px rgba(166,130,41,0.1)`
                 }}
               >
                 {/* Animated gradient overlay on hover */}
                 <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-700" style={{
-                  background: `linear-gradient(135deg, 
-                    rgba(252,211,77,0.4) 0%, 
-                    rgba(251,191,36,0.3) 25%,
-                    rgba(245,158,11,0.2) 50%,
-                    rgba(217,119,6,0.15) 100%)`,
-                  boxShadow: '0 20px 60px -12px rgba(245,158,11,0.35), inset 0 1px 2px rgba(255,255,255,0.5)'
+                  background: `linear-gradient(165deg, 
+                    rgba(61,52,38,0.9) 0%, 
+                    rgba(47,41,32,0.9) 50%,
+                    rgba(37,32,23,0.9) 100%)`,
+                  boxShadow: '0 20px 60px -12px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.1)'
                 }} />
                 
                 {/* Glass shine effect */}
-                <div className="absolute inset-0 rounded-3xl opacity-50" style={{
-                  background: 'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, transparent 50%)'
+                <div className="absolute inset-0 rounded-3xl opacity-30" style={{
+                  background: 'linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 50%)'
                 }} />
                 
                 <div className="relative z-10">
-                  <h3 className="text-gray-900 font-bold text-2xl mb-3 group-hover:text-amber-800 transition-colors duration-500" style={{
+                  <h3 className="text-white font-bold text-2xl mb-3 group-hover:text-amber-300 transition-colors duration-500" style={{
                     fontFamily: 'Georgia, serif',
-                    textShadow: '0 1px 2px rgba(0,0,0,0.05)'
+                    textShadow: '0 1px 2px rgba(0,0,0,0.3)'
                   }}>
                     {stat.title}
                   </h3>
-                  <p className="text-gray-700 text-sm font-medium leading-relaxed">
+                  <p className="text-gray-300 text-sm font-medium leading-relaxed">
                     {stat.subtitle}
                   </p>
                 </div>
                 
                 {/* Bottom accent glow */}
                 <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1.5 bg-linear-to-r from-amber-400 via-amber-500 to-amber-600 group-hover:w-20 transition-all duration-700 rounded-full blur-sm" />
-                <div className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-0 h-1 bg-linear-to-r from-amber-500 to-amber-600 group-hover:w-16 transition-all duration-700 rounded-full" />
+                <div className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-0 h-1 bg-linear-to-r from-amber-300 to-amber-500 group-hover:w-16 transition-all duration-700 rounded-full" />
               </div>
             ))}
           </div>

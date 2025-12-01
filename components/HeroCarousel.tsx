@@ -8,6 +8,7 @@ const images = [
   { src: "/pic2.jpeg", alt: "Hero Image 2" },
   { src: "/pic3.jpeg", alt: "Hero Image 3" },
   { src: "/pic4.jpeg", alt: "Hero Image 4" },
+  { src:"/hero/hero5.jpeg",alt:"hero image 5"}
 ];
 
 export default function HeroCarousel() {

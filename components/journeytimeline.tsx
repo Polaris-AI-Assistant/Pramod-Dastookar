@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Timeline } from "@/components/ui/timeline";
 
 export function TimelineDemo() {
@@ -17,6 +18,22 @@ export function TimelineDemo() {
             <li>• Developed early interest in understanding how things work and problem-solving</li>
             <li>• Foundation years that shaped character, work ethic, and lifelong learning approach</li>
           </ul>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 11.54.16 AM.jpeg"
+              alt="Early years"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 11.57.55 AM.jpeg"
+              alt="Foundation years"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -36,6 +53,22 @@ export function TimelineDemo() {
             <li>• Participated in technical projects and developed analytical thinking capabilities</li>
             <li>• Built strong academic foundation that would support future technical and teaching career</li>
           </ul>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.06.31 PM.jpeg"
+              alt="Engineering college days"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.06.46 PM.jpeg"
+              alt="College memories"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -54,6 +87,15 @@ export function TimelineDemo() {
             <li>• Enhanced problem-solving abilities through complex engineering challenges</li>
             <li>• Prepared for transition into professional engineering roles with advanced technical skills</li>
           </ul>
+          <div className="mt-6">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.14.29 PM.jpeg"
+              alt="Masters degree period"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -73,6 +115,15 @@ export function TimelineDemo() {
             <li>• Developed rigorous approach to problem-solving and quality standards</li>
             <li>• Collaborated with top scientists and engineers in high-stakes technical environment</li>
           </ul>
+          <div className="mt-6">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.17.07 PM.jpeg"
+              alt="BARC experience"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -91,6 +142,15 @@ export function TimelineDemo() {
             <li>• Bridged gap between theoretical engineering knowledge and practical industrial applications</li>
             <li>• Developed understanding of business operations and real-world engineering constraints</li>
           </ul>
+          <div className="mt-6">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.17.51 PM.jpeg"
+              alt="Industry experience"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -110,6 +170,22 @@ export function TimelineDemo() {
             <li>• Started mentoring students on career planning, skill development, and industry readiness</li>
             <li>• Discovered deep personal fulfillment in helping students achieve their professional goals</li>
           </ul>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.18.40 PM.jpeg"
+              alt="Transition to education"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.19.56 PM.jpeg"
+              alt="Beginning mentorship journey"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -130,6 +206,22 @@ export function TimelineDemo() {
             <li>• Mentored hundreds of students individually on career choices and professional development</li>
             <li>• Established reputation as dedicated mentor who genuinely cares about student success</li>
           </ul>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.21.25 PM.jpeg"
+              alt="Student development programs"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.22.04 PM.jpeg"
+              alt="Training sessions"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -149,6 +241,15 @@ export function TimelineDemo() {
             <li>• Developed innovative teaching methods combining theory with real-world applications</li>
             <li>• Became accessible mentor figure for students seeking academic and career guidance</li>
           </ul>
+          <div className="mt-6">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.23.04 PM.jpeg"
+              alt="Teaching and mentorship"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -169,6 +270,22 @@ export function TimelineDemo() {
             <li>• Built strong corporate relationships facilitating placement opportunities for students</li>
             <li>• Earned recognition as go-to mentor for career guidance and professional development</li>
           </ul>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.23.50 PM.jpeg"
+              alt="Mentoring students"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.24.55 PM.jpeg"
+              alt="Corporate collaborations"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -189,6 +306,22 @@ export function TimelineDemo() {
             <li>• Demonstrated that educators can contribute to cutting-edge research and industry advancement</li>
             <li>• Inspired students to pursue research-oriented careers and innovation mindset</li>
           </ul>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.25.42 PM.jpeg"
+              alt="Research and innovation"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.26.32 PM.jpeg"
+              alt="Patent work"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -209,6 +342,22 @@ export function TimelineDemo() {
             <li>• Extended mentorship reach beyond physical campus to students across Maharashtra</li>
             <li>• Provided free, accessible career guidance resources to thousands of aspiring engineers</li>
           </ul>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.26.46 PM.jpeg"
+              alt="YouTube channel launch"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.27.42 PM.jpeg"
+              alt="Digital content creation"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },
@@ -229,6 +378,22 @@ export function TimelineDemo() {
             <li>• Expanding digital outreach through continued content creation and online mentorship</li>
             <li>• Committed to mission of transforming students into confident, industry-ready professionals</li>
           </ul>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.30.02 PM.jpeg"
+              alt="Current endeavors"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+            <Image
+              src="/WhatsApp Image 2025-12-01 at 12.30.53 PM.jpeg"
+              alt="Continuing the mission"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
         </div>
       ),
     },

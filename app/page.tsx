@@ -8,6 +8,7 @@ import { Feature108Demo } from "@/components/impact2";
 import { Logos3 } from "@/components/logos3";
 import HeroCarousel from "@/components/HeroCarousel";
 import Contact2 from "@/components/contact";
+import { FeaturedVideos } from "@/components/FeaturedVideos";
 
 
 export default function Home() {
@@ -26,8 +27,8 @@ export default function Home() {
         <Feature108Demo />
         {/* <Impact/> */}
         <Logos3 />
-        
-        <ExperienceTimeline />
+        <FeaturedVideos />
+        {/* <ExperienceTimeline /> */}
         <Contact2/>
       </div>
     </>

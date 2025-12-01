@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Berkshire_Swash, Playfair_Display } from 'next/font/google';
 
@@ -20,72 +21,84 @@ const ExperienceTimeline = () => {
     {
       year: 1973,
       title: "Early Life",
-      description: "Born on 11th February 1973, marking the beginning of a journey shaped by strong values, discipline, and academic encouragement. Early experiences fostered curiosity, a practical mindset, and an eagerness to understand how things work—traits that later influenced both engineering and leadership choices."
+      description: "Born on 11th February 1973, marking the beginning of a journey shaped by strong values, discipline, and academic encouragement. Early experiences fostered curiosity, a practical mindset, and an eagerness to understand how things work—traits that later influenced both engineering and leadership choices.",
+      image: "/WhatsApp Image 2025-12-01 at 12.26.46 PM.jpeg"
     },
     {
       year: 1991,
       title: "Engineering Aspirations Take Shape",
       period: "1991–1997",
-      description: "Pursued a Bachelor's degree in Mechanical Engineering from Babasaheb Ambedkar Marathwada University, Aurangabad. These years strengthened his foundation in core engineering principles and ignited a deeper interest in design, mechanics, and applied problem-solving. Exposure to laboratories, projects, and teamwork gradually shaped his technical identity."
+      description: "Pursued a Bachelor's degree in Mechanical Engineering from Babasaheb Ambedkar Marathwada University, Aurangabad. These years strengthened his foundation in core engineering principles and ignited a deeper interest in design, mechanics, and applied problem-solving. Exposure to laboratories, projects, and teamwork gradually shaped his technical identity.",
+      image: "/WhatsApp Image 2025-12-01 at 11.57.55 AM.jpeg"
     },
     {
       year: 1997,
       title: "Academic Growth & Higher Studies",
       period: "1997–1999",
-      description: "Completed a Master of Engineering (M.E.) in Design from Pune University. This period refined his analytical thinking, understanding of design methodologies, and approach to engineering innovation. It also introduced him to research-oriented work, preparing the ground for future academic and technical contributions."
+      description: "Completed a Master of Engineering (M.E.) in Design from Pune University. This period refined his analytical thinking, understanding of design methodologies, and approach to engineering innovation. It also introduced him to research-oriented work, preparing the ground for future academic and technical contributions.",
+      image: "/WhatsApp Image 2025-12-01 at 12.06.31 PM.jpeg"
     },
     {
       year: 1999,
       title: "Step Into India's Scientific World",
       company: "Bhabha Atomic Research Centre (BARC), Mumbai",
-      description: "Entered one of India's most prestigious scientific and research environments. This phase provided exposure to high-precision systems, rigorous engineering processes, and a culture of technical excellence. The experience deepened his understanding of structured problem-solving and complex system behaviour."
+      description: "Entered one of India's most prestigious scientific and research environments. This phase provided exposure to high-precision systems, rigorous engineering processes, and a culture of technical excellence. The experience deepened his understanding of structured problem-solving and complex system behaviour.",
+      image: "/WhatsApp Image 2025-12-01 at 12.06.46 PM.jpeg"
     },
     {
       year: 2002,
       title: "Transition to Product Engineering",
       company: "Bombay Dyeing Group",
-      description: "Moved into industry-driven mechanical and product design, gaining firsthand experience in product development cycles, industrial engineering, and practical implementation of design principles. This transition enriched his understanding of how ideas transform into manufacturable, real-world solutions."
+      description: "Moved into industry-driven mechanical and product design, gaining firsthand experience in product development cycles, industrial engineering, and practical implementation of design principles. This transition enriched his understanding of how ideas transform into manufacturable, real-world solutions.",
+      image: "/WhatsApp Image 2025-12-01 at 12.14.29 PM.jpeg"
     },
     {
       year: 2008,
       title: "A Turning Point: Discovering Passion for Education",
-      description: "Shifted focus toward mentoring and student development—a defining moment in his career. What began as involvement in student interactions evolved into a deep commitment to guiding young minds, shaping careers, and contributing to the academic ecosystem. This turning point set the foundation for his future pursuit in training, placements, and institutional development."
+      description: "Shifted focus toward mentoring and student development—a defining moment in his career. What began as involvement in student interactions evolved into a deep commitment to guiding young minds, shaping careers, and contributing to the academic ecosystem. This turning point set the foundation for his future pursuit in training, placements, and institutional development.",
+      image: "/WhatsApp Image 2025-12-01 at 12.06.46 PM.jpeg"
     },
     {
       year: 2009,
       title: "Building Foundations in Student Development",
       company: "JSPM Institutions",
       period: "2008–2013",
-      description: "Spent this period engaging with students through skill-building initiatives, career awareness sessions, and placement preparation efforts. This phase strengthened his insight into student challenges, diverse learning styles, and the transformative impact of structured guidance—marking the start of his long-standing work in employability enhancement."
+      description: "Spent this period engaging with students through skill-building initiatives, career awareness sessions, and placement preparation efforts. This phase strengthened his insight into student challenges, diverse learning styles, and the transformative impact of structured guidance—marking the start of his long-standing work in employability enhancement.",
+      image: "/WhatsApp Image 2025-12-01 at 11.54.16 AM.jpeg"
     },
     {
       year: 2013,
       title: "Stepping Into Teaching & Mentorship",
-      description: "Took on teaching responsibilities in Mechanical Engineering, combining technical expertise with an ability to simplify complex concepts. Classroom engagement became a platform to inspire students, build confidence, and promote clarity in both academics and career planning."
+      description: "Took on teaching responsibilities in Mechanical Engineering, combining technical expertise with an ability to simplify complex concepts. Classroom engagement became a platform to inspire students, build confidence, and promote clarity in both academics and career planning.",
+      image: "/WhatsApp Image 2025-12-01 at 12.06.31 PM.jpeg"
     },
     {
       year: 2014,
       title: "Becoming a Recognized Mentor in Pune",
       period: "2013–2020",
-      description: "Became a well-known figure in Pune's academic and student community. His involvement in scholarship initiatives, skill-development programs, and mentoring activities expanded significantly. This phase strengthened his reputation as a trusted guide who meaningfully impacted student careers through structured training and career support."
+      description: "Became a well-known figure in Pune's academic and student community. His involvement in scholarship initiatives, skill-development programs, and mentoring activities expanded significantly. This phase strengthened his reputation as a trusted guide who meaningfully impacted student careers through structured training and career support.",
+      image: "/WhatsApp Image 2025-12-01 at 12.19.56 PM.jpeg"
     },
     {
       year: 2018,
       title: "Research, Innovation & Patents",
       period: "2018–2022",
-      description: "Focused on research in construction-material innovations, contributing to patents and presenting at international conferences. This period showcased his ability to balance academic exploration with practical application, reinforcing his commitment to innovation and continuous learning."
+      description: "Focused on research in construction-material innovations, contributing to patents and presenting at international conferences. This period showcased his ability to balance academic exploration with practical application, reinforcing his commitment to innovation and continuous learning.",
+      image: "/WhatsApp Image 2025-12-01 at 12.22.04 PM.jpeg"
     },
     {
       year: 2020,
       title: "Digital Impact for Students",
       period: "2020–Present",
-      description: "Launched a placement-awareness YouTube platform that steadily grew into a valuable resource for thousands of students. With 450+ videos, 10,000+ subscribers, and 1M+ views, the channel expanded his impact beyond campuses—providing accessible guidance, skill tips, and career insights for aspiring engineers."
+      description: "Launched a placement-awareness YouTube platform that steadily grew into a valuable resource for thousands of students. With 450+ videos, 10,000+ subscribers, and 1M+ views, the channel expanded his impact beyond campuses—providing accessible guidance, skill tips, and career insights for aspiring engineers.",
+      image: "/WhatsApp Image 2025-12-01 at 12.23.04 PM.jpeg"
     },
     {
       year: 2025,
       title: "Continuing the Mission of Student Empowerment",
       company: "BVCOEP",
-      description: "Continuing to contribute to student development, academic excellence, and institutional growth. This phase represents the culmination of over 25 years of experience—blending engineering insight, educational leadership, and a mission-driven approach to shaping future-ready professionals."
+      description: "Continuing to contribute to student development, academic excellence, and institutional growth. This phase represents the culmination of over 25 years of experience—blending engineering insight, educational leadership, and a mission-driven approach to shaping future-ready professionals.",
+      image: "/535490238_10233845401330088_5325813885231810051_n.jpg"
     }
   ];
 
@@ -230,12 +243,15 @@ const ExperienceTimeline = () => {
 
         {/* Content Card */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start mt-4">
-          {/* Image placeholder */}
-          <div className="bg-linear-to-br from-amber-400/20 via-amber-300/10 to-amber-500/20 rounded-lg h-48 sm:h-64 flex items-center justify-center border-2 border-amber-300">
-            <div className="text-amber-700 text-center p-8">
-              <div className="text-4xl sm:text-6xl mb-4">📸</div>
-              <p className="text-xs sm:text-sm opacity-75" style={{ fontFamily: 'var(--font-playfair)' }}>Professional photo placeholder</p>
-            </div>
+          {/* Image */}
+          <div className="relative bg-linear-to-br from-amber-400/20 via-amber-300/10 to-amber-500/20 rounded-lg h-48 sm:h-64 md:h-80 overflow-hidden border-2 border-amber-300">
+            <Image
+              src={currentExperience.image}
+              alt={currentExperience.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
 
           {/* Content */}
