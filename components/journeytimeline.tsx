@@ -380,14 +380,14 @@ export function TimelineDemo() {
           </ul>
           <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
             <Image
-              src="/WhatsApp Image 2025-12-01 at 12.30.02 PM.jpeg"
+              src=""
               alt="Current endeavors"
               width={500}
               height={300}
               className="rounded-lg object-cover shadow-lg"
             />
             <Image
-              src="/WhatsApp Image 2025-12-01 at 12.30.53 PM.jpeg"
+              src=""
               alt="Continuing the mission"
               width={500}
               height={300}

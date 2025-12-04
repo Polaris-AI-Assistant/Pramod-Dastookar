@@ -46,20 +46,20 @@ function getThumbnailUrl(url: string): string {
 const defaultVideos: FeaturedVideo[] = [
   {
     id: 'XwNpy_vw2tQ',
-    title: 'Lorem Ipsum Dolor Sit Amet',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
+    title: 'Hon Kamal Kishore Kadam Ex Education Minister Praises PG Dastoorkar',
+    description: 'Hon Kamal Kishore Kadam, Ex Education Minister, praises the remarkable work of PG Dastoorkar on the Chattopadhyay Commission.',
     videoUrl: 'https://youtu.be/XwNpy_vw2tQ',
   },
   {
     id: 'EcaMcbQkOsc',
-    title: 'Consectetur Adipiscing Elite',
-    description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+    title: 'Condolence Message by Prakash Javadekar',
+    description: 'Condolence message to P G Dastoorkar by Prakash Javadekar, honoring his contributions and legacy.',
     videoUrl: 'https://youtu.be/EcaMcbQkOsc',
   },
   {
     id: '8Dl7Fuxt4Rs',
-    title: 'Sed Do Eiusmod Tempor',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    title: 'SAAM TV - Pramod Dastoorkar',
+    description: 'Pramod Dastoorkar featured on SAAM TV discussing important topics and sharing his insights.',
     videoUrl: 'https://youtu.be/8Dl7Fuxt4Rs',
   },
 ];
