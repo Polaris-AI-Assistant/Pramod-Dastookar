@@ -87,11 +87,11 @@ const FeaturedVideos = ({
           <div className="w-32 sm:w-40 md:w-48 h-px bg-linear-to-r from-transparent via-amber-600 to-transparent mx-auto mt-4 sm:mt-5 md:mt-6" />
         </div>
       </div>
-      <div className="pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-4">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-4 w-full">
+        <div className="w-full mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {videos.map((video) => (
-              <div key={video.id} className="bg-white rounded-xl shadow-md border-2 border-[#A68229]/10 overflow-hidden">
+              <div key={video.id} className="bg-white rounded-xl shadow-md border-2 border-[#A68229]/10 overflow-hidden w-[450px]">
                 <div className="p-4">
                   <div className="w-full h-52 sm:h-56 md:h-64">
                     <VideoPlayer

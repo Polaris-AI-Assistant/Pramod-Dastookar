@@ -47,13 +47,9 @@ const methods = [
   {
     icon: FiMail,
     title: "Email",
-    lines: ["dastoorkarpp@bvuniversity.edu.in", "pramoddastoorkar@yahoo.com"],
+    lines: ["dastoorkarpramod@gmail.com"],
   },
-  {
-    icon: FiPhone,
-    title: "Phone",
-    lines: ["+91 20-30253500, Ext. 1093"],
-  },
+  
   
 ];
 
