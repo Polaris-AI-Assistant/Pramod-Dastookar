@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Navbar/>
-      <div className="w-full">
+      <div className="w-full min-w-full overflow-x-hidden">
         <HeroCarousel />
         <Feature108Demo />
         {/* <Impact/> */}
