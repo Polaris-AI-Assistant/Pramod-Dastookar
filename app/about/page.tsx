@@ -68,7 +68,7 @@ const AboutSection = () => {
   return (
     <>
       <Navbar />
-      <div className={`min-h-screen w-full relative overflow-hidden bg-[#FAF9F6] ${berkshireSwash.variable} ${playfairDisplay.variable}`}>
+      <div className={`min-h-screen w-full relative overflow-hidden bg-[#FAF9F6] pt-16 sm:pt-20 ${berkshireSwash.variable} ${playfairDisplay.variable}`}>
       {/* Main content */}
       <div className={`relative z-10 max-w-7xl mx-auto px-6 py-20 transition-all duration-1000 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'

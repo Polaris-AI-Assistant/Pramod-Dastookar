@@ -210,7 +210,7 @@ export default function TimelineDemo() {
   return (
     <>
       <Navbar />
-      <div className={`relative w-full overflow-clip bg-[#FAF9F6] ${berkshireSwash.variable} ${playfairDisplay.variable}`}>
+      <div className={`relative w-full overflow-clip bg-[#FAF9F6] pt-16 sm:pt-20 ${berkshireSwash.variable} ${playfairDisplay.variable}`}>
         <div className="py-12">
           <div className="text-center mb-8">
             <span className="text-xl tracking-[0.3em] uppercase font-semibold" style={{ color: '#A68229' }}>

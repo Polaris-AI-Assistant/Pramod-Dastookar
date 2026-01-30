@@ -28,7 +28,7 @@ const Navbar = () => {
     <>
       {/* Main Navbar */}
       <nav className={`px-4 sm:px-6 py-3 sm:py-4 shadow-lg fixed top-0 left-0 right-0 z-50 transition-colors duration-500 backdrop-blur-sm ${
-        isMenuOpen ? 'bg-white text-gray-800' : 'text-white border-b border-amber-300/30'
+        isMenuOpen ? 'bg-white text-gray-800' : 'text-white'
       }`}
       style={!isMenuOpen ? { background: 'linear-gradient(165deg, #3D3426 0%, #2F2920 50%, #252017 100%)' } : undefined}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -189,8 +189,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Spacer to prevent content from hiding under fixed navbar */}
-      <div className="h-16 sm:h-20"></div>
     </>
   );
 };

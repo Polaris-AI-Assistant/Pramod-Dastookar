@@ -91,7 +91,7 @@ export default function PlacementVideosPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-[#FAF9F6] py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-[#FAF9F6] pt-20 sm:pt-24 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <div className="inline-block mb-4">

@@ -99,7 +99,7 @@ export default function AwardsPage() {
   return (
     <>
       <Navbar />
-      <div className={`min-h-screen bg-[#FAF9F6] py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 ${berkshireSwash.variable} ${theSeasons.variable} ${calistoga.variable} ${playfairDisplay.variable}`}>
+      <div className={`min-h-screen bg-[#FAF9F6] pt-20 sm:pt-24 pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 md:px-8 ${berkshireSwash.variable} ${theSeasons.variable} ${calistoga.variable} ${playfairDisplay.variable}`}>
       <div className="max-w-7xl mx-auto">
         {/* Header section */}
         <div className="text-center mb-6 sm:mb-8">

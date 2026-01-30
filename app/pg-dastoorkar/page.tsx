@@ -340,7 +340,7 @@ export default function PGDastoorkarPage() {
   return (
     <>
       <Navbar />
-      <div className={`min-h-screen w-full relative overflow-hidden bg-[#FAF9F6] ${berkshireSwash.variable} ${playfairDisplay.variable}`}>
+      <div className={`min-h-screen w-full relative overflow-hidden bg-[#FAF9F6] pt-16 sm:pt-20 ${berkshireSwash.variable} ${playfairDisplay.variable}`}>
         {/* Main content */}
         <div className={`relative z-10 max-w-7xl mx-auto px-6 pt-0 pb-20 transition-all duration-1000 ease-out ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -617,6 +617,16 @@ export default function PGDastoorkarPage() {
                       </>
                     )}
                   </div>
+                  <a 
+                    href="/fifth-pay-commission"
+                    className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+                    style={{ background: 'linear-gradient(135deg, #A68229, #C9A83A)' }}
+                  >
+                    {isMarathi ? 'अधिक वाचा' : 'Read More'}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
               
